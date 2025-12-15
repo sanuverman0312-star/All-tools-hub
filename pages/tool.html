@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool - All Tools Hub by Saanu</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-tools"></i>
+                    <span>All Tools Hub <small style="font-size: 0.6em; opacity: 0.8;">by Saanu</small></span>
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Text Tools <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tool.html?tool=word-counter">Word Counter</a></li>
+                            <li><a href="tool.html?tool=case-converter">Case Converter</a></li>
+                            <li><a href="tool.html?tool=lorem-generator">Lorem Ipsum Generator</a></li>
+                            <li><a href="tool.html?tool=text-repeater">Text Repeater</a></li>
+                            <li><a href="tool.html?tool=remove-duplicates">Remove Duplicates</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Image Tools <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tool.html?tool=image-resizer">Image Resizer</a></li>
+                            <li><a href="tool.html?tool=image-compressor">Image Compressor</a></li>
+                            <li><a href="tool.html?tool=image-converter">Image Converter</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Converters <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tool.html?tool=json-formatter">JSON Formatter</a></li>
+                            <li><a href="tool.html?tool=base64">Base64 Encoder/Decoder</a></li>
+                            <li><a href="tool.html?tool=url-encoder">URL Encoder/Decoder</a></li>
+                            <li><a href="tool.html?tool=color-converter">Color Converter</a></li>
+                            <li><a href="tool.html?tool=unit-converter">Unit Converter</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tool.html?tool=password-generator">Password Generator</a></li>
+                            <li><a href="tool.html?tool=qr-generator">QR Code Generator</a></li>
+                            <li><a href="tool.html?tool=uuid-generator">UUID Generator</a></li>
+                            <li><a href="tool.html?tool=hash-generator">Hash Generator</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">SEO Tools <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tool.html?tool=meta-generator">Meta Tag Generator</a></li>
+                            <li><a href="tool.html?tool=slug-generator">Slug Generator</a></li>
+                            <li><a href="tool.html?tool=keyword-density">Keyword Density</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tool Content -->
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header" id="toolHeader">
+                <h1>Loading Tool...</h1>
+                <p>Please wait</p>
+            </div>
+            <div class="tool-container" id="toolContainer">
+                <div class="spinner"></div>
+            </div>
+            
+            <!-- Related Tools -->
+            <div class="related-tools" style="margin-top: 40px;">
+                <h3 style="margin-bottom: 20px;">Related Tools</h3>
+                <div class="tools-grid" id="relatedTools"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 All Tools Hub by Saanu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Initialize tool page
+        document.addEventListener('DOMContentLoaded', function() {
+            initApp();
+            
+            // Get tool name from URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var toolName = urlParams.get('tool');
+            
+            if (toolName) {
+                loadTool(toolName);
+            } else {
+                document.getElementById('toolHeader').innerHTML = '<h1>Tool Not Found</h1><p>Please select a tool from the menu.</p>';
+                document.getElementById('toolContainer').innerHTML = '<p>Go back to <a href="../index.html">home page</a></p>';
+            }
+        });
+    </script>
+</body>
+</html>

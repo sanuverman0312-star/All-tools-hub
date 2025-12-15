@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Saanu - All Tools Hub by Saanu</title>
+    <meta name="description" content="Get in touch with Saanu. Have questions, feedback, or suggestions? We'd love to hear from you!">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section {
+            padding: 80px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .contact-form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        .contact-form-container h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        .contact-form-container > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        .form-group label span {
+            color: #ef4444;
+        }
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--light);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+        }
+        .form-control::placeholder {
+            color: var(--gray);
+        }
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 18px 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: var(--transition);
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .info-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .info-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        .info-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        .info-content a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+        .social-section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .social-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            transition: var(--transition);
+        }
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        .social-btn.facebook { background: #1877f2; }
+        .social-btn.twitter { background: #1da1f2; }
+        .social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .social-btn.linkedin { background: #0077b5; }
+        .social-btn.github { background: #333; }
+        .social-btn.youtube { background: #ff0000; }
+        .faq-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-item h3 i {
+            color: var(--primary);
+        }
+        .faq-item p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        .map-section {
+            padding: 0;
+            height: 400px;
+            background: var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-placeholder {
+            text-align: center;
+            color: var(--gray);
+        }
+        .map-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .success-message i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-tools"></i>
+                    <span>All Tools Hub <small style="font-size: 0.6em; opacity: 0.8;">by Saanu</small></span>
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get in Touch 💬</h1>
+            <p>Have questions, feedback, or suggestions? I'd love to hear from you! Drop me a message and I'll get back to you as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Me a Message</h2>
+                    <p>Fill out the form below and I'll respond within 24-48 hours.</p>
+                    
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name <span>*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject <span>*</span></label>
+                            <select class="form-control" id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="partnership">Partnership / Business</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message <span>*</span></label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Me</h3>
+                            <p>For any inquiries or support, feel free to email me at:</p>
+                            <a href="mailto:contact@alltoolshub.com">contact@alltoolshub.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Response Time</h3>
+                            <p>I typically respond to all messages within <strong>24-48 hours</strong>. For urgent matters, please mention it in the subject line.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Working remotely from India 🇮🇳<br>Serving users worldwide 🌍</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Support Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM (IST)<br>Saturday - Sunday: Limited support</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Section -->
+                    <div class="social-section">
+                        <h3>Connect With Me</h3>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-btn twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-btn linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-btn github" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Are all tools really free?</h3>
+                    <p>Yes, absolutely! All tools on All Tools Hub are 100% free to use with no hidden charges, no premium plans, and no limits. Free forever!</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Is my data safe?</h3>
+                    <p>Your privacy is my top priority. All data processing happens in your browser - nothing is ever sent to or stored on any server.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can I request a new tool?</h3>
+                    <p>Absolutely! I love hearing suggestions from users. Use the contact form above to submit your feature request and I'll consider adding it.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do I need to create an account?</h3>
+                    <p>No account needed! Simply visit the website and start using any tool immediately. No sign-up, no login, no hassle.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How do I report a bug?</h3>
+                    <p>Found a bug? Please use the contact form above and select "Bug Report" as the subject. Include as much detail as possible to help me fix it quickly.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can I use tools on mobile?</h3>
+                    <p>Yes! All tools are fully responsive and work perfectly on smartphones, tablets, and desktop computers across all modern browsers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="../index.html" class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <span>All Tools Hub <small style="display: block; font-size: 0.7em; opacity: 0.8;">by Saanu</small></span>
+                    </a>
+                    <p>Free online tools for everyone. Created with ❤️ by Saanu.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Saanu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Popular Tools</h4>
+                    <ul>
+                        <li><a href="tool.html?tool=word-counter">Word Counter</a></li>
+                        <li><a href="tool.html?tool=password-generator">Password Generator</a></li>
+                        <li><a href="tool.html?tool=qr-generator">QR Code Generator</a></li>
+                        <li><a href="tool.html?tool=json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="../index.html#allTools">Text Tools</a></li>
+                        <li><a href="../index.html#allTools">Image Tools</a></li>
+                        <li><a href="../index.html#allTools">Converters</a></li>
+                        <li><a href="../index.html#allTools">Generators</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 All Tools Hub by Saanu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initApp();
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Show toast
+                showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Hide success message after 5 seconds
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
