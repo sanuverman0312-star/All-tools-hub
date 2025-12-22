@@ -1423,3 +1423,32 @@ input, textarea, select {
 .toast.info i {
     color: var(--primary);
 }
+
+/* ===== Theme Readability Fixes ===== */
+input, 
+textarea, 
+select, 
+.tool-input, 
+.tool-textarea, 
+.output, 
+.result-box,
+.stat-box .value {
+    color: var(--dark) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gray) !important;
+    opacity: 0.8;
+}
+
+[data-theme="dark"] select option {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+[data-theme="dark"] .tool-textarea,
+[data-theme="dark"] .tool-input,
+[data-theme="dark"] .stat-box {
+    border-color: var(--gray-light);
+}

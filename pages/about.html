@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Saanu - All Tools Hub by Saanu</title>
-    <meta name="description" content="Learn more about Saanu, the creator of All Tools Hub - a collection of 100+ free online tools.">
+    <title>About Saanu - All Tools Hub</title>
+    <meta name="description" content="Learn more about Saanu, the developer behind All Tools Hub. A passion for creating free, useful web tools for everyone.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -72,39 +72,9 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        .stats-section {
-            background: var(--light);
-            padding: 60px 0;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-        .stat-item {
-            background: var(--white);
-            padding: 40px 20px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-        }
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .stat-item .number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--dark);
-            display: block;
-        }
-        .stat-item .label {
-            color: var(--gray);
-            font-size: 1rem;
-        }
         .mission-section {
             padding: 80px 0;
+            background: var(--light);
         }
         .mission-grid {
             display: grid;
@@ -136,74 +106,6 @@
         .mission-card p {
             color: var(--gray);
             line-height: 1.7;
-        }
-        .timeline-section {
-            padding: 80px 0;
-            background: var(--light);
-        }
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-        .timeline-item {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 50%;
-            position: relative;
-            margin-bottom: 40px;
-        }
-        .timeline-item:nth-child(even) {
-            justify-content: flex-start;
-            padding-right: 0;
-            padding-left: 50%;
-        }
-        .timeline-content {
-            background: var(--white);
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            max-width: 350px;
-            margin-right: 30px;
-        }
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: 0;
-            margin-left: 30px;
-        }
-        .timeline-content h4 {
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        .timeline-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        .timeline-content p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--primary);
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            box-shadow: var(--shadow);
         }
         .cta-section {
             padding: 80px 0;
@@ -256,32 +158,8 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
             .mission-grid {
                 grid-template-columns: 1fr;
-            }
-            .timeline::before {
-                left: 20px;
-            }
-            .timeline-item {
-                padding-right: 0;
-                padding-left: 60px;
-                justify-content: flex-start;
-            }
-            .timeline-item:nth-child(even) {
-                padding-left: 60px;
-            }
-            .timeline-content {
-                margin-right: 0;
-                margin-left: 0;
-            }
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 0;
-            }
-            .timeline-dot {
-                left: 20px;
             }
             .cta-buttons {
                 flex-direction: column;
@@ -326,7 +204,7 @@
                 <i class="fas fa-user"></i>
             </div>
             <h1>Hi, I'm Saanu! 👋</h1>
-            <p>A passionate developer dedicated to creating free, useful tools that make everyone's life easier.</p>
+            <p>Creating free, accessible, and useful web tools for developers and students.</p>
         </div>
     </section>
 
@@ -337,55 +215,20 @@
                 <div class="about-text">
                     <h2>About Me</h2>
                     <p>
-                        I'm Saanu, a full-stack developer and digital creator with a passion for building tools that solve real-world problems. I believe that powerful tools should be accessible to everyone, regardless of their technical background or budget.
+                        I'm Saanu, a developer with a passion for building simple yet powerful web applications. I created <strong>All Tools Hub</strong> to solve a common problem: finding reliable, fast, and free online tools without excessive ads or paywalls.
                     </p>
                     <p>
-                        That's why I created <strong>All Tools Hub</strong> – a comprehensive collection of 100+ free online tools designed to help you work smarter, not harder. From text manipulation to image editing, from SEO optimization to code formatting, I've built tools for every need.
-                    </p>
-                    <p>
-                        My mission is simple: to provide high-quality, free tools that respect your privacy and deliver results without any hidden costs or complicated sign-up processes.
+                        My goal is to provide a central hub where anyone can perform quick tasks—like formatting JSON, generating passwords, or resizing images—securely in their browser.
                     </p>
                     <div class="skills-list">
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">UI/UX Design</span>
                         <span class="skill-tag">Web Development</span>
                     </div>
                 </div>
-                <div class="about-image" style="text-align: center;">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop" alt="Developer workspace" style="border-radius: 16px; box-shadow: var(--shadow-lg); max-width: 100%;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <i class="fas fa-tools"></i>
-                    <span class="number">100+</span>
-                    <span class="label">Free Tools</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <span class="number">1M+</span>
-                    <span class="label">Happy Users</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe"></i>
-                    <span class="number">150+</span>
-                    <span class="label">Countries</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-star"></i>
-                    <span class="number">4.9</span>
-                    <span class="label">User Rating</span>
+                <div class="about-image" style="text-align: center; display: flex; justify-content: center; align-items: center; background: #f0f0f0; border-radius: 16px; min-height: 300px;">
+                    <i class="fas fa-laptop-code" style="font-size: 5rem; color: var(--primary);"></i>
                 </div>
             </div>
         </div>
@@ -395,91 +238,24 @@
     <section class="mission-section">
         <div class="container">
             <div class="section-header">
-                <h2>My Mission & Values</h2>
-                <p>What drives me to build better tools every day</p>
+                <h2>My Mission</h2>
+                <p>Simple values that drive this project</p>
             </div>
             <div class="mission-grid">
                 <div class="mission-card">
                     <i class="fas fa-unlock-alt"></i>
-                    <h3>Free Forever</h3>
-                    <p>I believe powerful tools should be accessible to everyone. All tools on this platform will always remain 100% free with no hidden costs.</p>
+                    <h3>Always Free</h3>
+                    <p>Tools should be accessible to everyone. This platform remains free to use for all visitors.</p>
                 </div>
                 <div class="mission-card">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Privacy First</h3>
-                    <p>Your data belongs to you. All processing happens in your browser, and I never store, track, or sell your personal information.</p>
+                    <p>Client-side processing ensures your data stays on your device and is never stored on our servers.</p>
                 </div>
                 <div class="mission-card">
                     <i class="fas fa-rocket"></i>
-                    <h3>Continuous Improvement</h3>
-                    <p>I'm constantly adding new tools and improving existing ones based on user feedback. Your suggestions shape the future of this platform.</p>
-                </div>
-                <div class="mission-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>User-Centric Design</h3>
-                    <p>Every tool is designed with simplicity and usability in mind. No confusing interfaces – just straightforward, effective tools.</p>
-                </div>
-                <div class="mission-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Lightning Fast</h3>
-                    <p>Speed matters. All tools are optimized to work instantly, giving you results in milliseconds without any loading delays.</p>
-                </div>
-                <div class="mission-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Works Everywhere</h3>
-                    <p>Whether you're on a desktop, tablet, or mobile phone, all tools work perfectly across all devices and browsers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Journey</h2>
-                <p>The story behind All Tools Hub</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2020</h4>
-                        <h3>The Idea Was Born</h3>
-                        <p>Frustrated with cluttered, ad-filled tool websites, I decided to build something better – clean, fast, and free tools.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2021</h4>
-                        <h3>First Tools Launched</h3>
-                        <p>Started with 10 basic text tools. The positive feedback motivated me to keep building more.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2022</h4>
-                        <h3>Growing Community</h3>
-                        <p>Reached 100,000 users! Added image tools, converters, and generators based on user requests.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2023</h4>
-                        <h3>Major Redesign</h3>
-                        <p>Complete platform redesign with dark mode, mobile optimization, and 50+ new tools.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2024</h4>
-                        <h3>1 Million Users!</h3>
-                        <p>Celebrating 1 million users worldwide. Now featuring 100+ tools across 6 categories.</p>
-                    </div>
+                    <h3>Fast & Simple</h3>
+                    <p>No bloated software or complex sign-ups. Just efficient tools that get the job done quickly.</p>
                 </div>
             </div>
         </div>
@@ -488,8 +264,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Let's Build Something Together</h2>
-            <p>Have an idea for a new tool? Found a bug? Or just want to say hi? I'd love to hear from you!</p>
+            <h2>Have a suggestion?</h2>
+            <p>I'm always looking to improve. Let me know if you have an idea for a new tool.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="cta-btn primary">
                     <i class="fas fa-envelope"></i> Contact Me
@@ -511,13 +287,6 @@
                         <span>All Tools Hub <small style="display: block; font-size: 0.7em; opacity: 0.8;">by Saanu</small></span>
                     </a>
                     <p>Free online tools for everyone. Created with ❤️ by Saanu.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -526,6 +295,8 @@
                         <li><a href="about.html">About Saanu</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -548,7 +319,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 All Tools Hub by Saanu. All rights reserved.</p>
+                <p>&copy; 2025 All Tools Hub by Saanu. All rights reserved.</p>
+                <p style="font-size: 0.9em; margin-top: 5px;">Contact: saanu03verman@gmail.com</p>
             </div>
         </div>
     </footer>

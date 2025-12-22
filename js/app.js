@@ -2541,4 +2541,5 @@ function clearKeywordDensity() {
 // ==========================================
 // END OF APP.JS
 // ==========================================
-console.log('All Tools Hub by Saanu - App Loaded Successfully!');
+// Console message removed for production
+// console.log('All Tools Hub by Saanu - App Loaded Successfully!');

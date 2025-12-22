@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool - All Tools Hub by Saanu</title>
+    <meta name="description" content="Use our free online tool. Fast, secure, and works entirely in your browser.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Primary Meta Tags -->
+    <meta name="robots" content="index, follow">
 </head>
 <body>
     <!-- Header -->
@@ -85,14 +88,51 @@
                 <h1>Loading Tool...</h1>
                 <p>Please wait</p>
             </div>
+            
+            <!-- AdSense Ad Placement: Top of Tool -->
+            <div style="text-align: center; margin: 20px 0;">
+                <!-- Paste AdSense code here later -->
+            </div>
+
             <div class="tool-container" id="toolContainer">
                 <div class="spinner"></div>
             </div>
+
+            <!-- How to Use Section -->
+            <section class="how-to-use" style="background: var(--white); padding: 30px; border-radius: 16px; margin-top: 40px; box-shadow: var(--shadow);">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">How to Use This Tool</h2>
+                <ul style="list-style-type: none; counter-reset: steps;">
+                    <li style="position: relative; padding-left: 35px; margin-bottom: 15px; color: var(--gray); line-height: 1.6;">
+                        <span style="position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--primary); color: white; border-radius: 50%; text-align: center; line-height: 24px; font-size: 0.9rem; font-weight: bold; counter-increment: steps; content: counter(steps);"></span>
+                        Enter your data, text, or upload a file in the input area above.
+                    </li>
+                    <li style="position: relative; padding-left: 35px; margin-bottom: 15px; color: var(--gray); line-height: 1.6;">
+                        <span style="position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--primary); color: white; border-radius: 50%; text-align: center; line-height: 24px; font-size: 0.9rem; font-weight: bold; counter-increment: steps; content: counter(steps);"></span>
+                        Adjust any available settings or options to customize the output to your needs.
+                    </li>
+                    <li style="position: relative; padding-left: 35px; margin-bottom: 15px; color: var(--gray); line-height: 1.6;">
+                        <span style="position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--primary); color: white; border-radius: 50%; text-align: center; line-height: 24px; font-size: 0.9rem; font-weight: bold; counter-increment: steps; content: counter(steps);"></span>
+                        Click the processing button (e.g., "Convert", "Generate", "Calculate").
+                    </li>
+                    <li style="position: relative; padding-left: 35px; margin-bottom: 0; color: var(--gray); line-height: 1.6;">
+                        <span style="position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--primary); color: white; border-radius: 50%; text-align: center; line-height: 24px; font-size: 0.9rem; font-weight: bold; counter-increment: steps; content: counter(steps);"></span>
+                        Copy your result to the clipboard or download the generated file instantly.
+                    </li>
+                </ul>
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--gray-light); font-size: 0.9rem; color: var(--gray);">
+                    <i class="fas fa-shield-alt" style="color: var(--primary);"></i> <strong>Privacy Note:</strong> This tool works entirely in your browser. Your data is not sent to any server.
+                </div>
+            </section>
             
             <!-- Related Tools -->
             <div class="related-tools" style="margin-top: 40px;">
                 <h3 style="margin-bottom: 20px;">Related Tools</h3>
                 <div class="tools-grid" id="relatedTools"></div>
+            </div>
+
+            <!-- AdSense Ad Placement: Bottom of Tool -->
+            <div style="text-align: center; margin: 40px 0;">
+                <!-- Paste AdSense code here later -->
             </div>
         </div>
     </main>
@@ -100,8 +140,35 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="../index.html" class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <span>All Tools Hub <small style="display: block; font-size: 0.7em; opacity: 0.8;">by Saanu</small></span>
+                    </a>
+                    <p>Free online tools for everyone. Created with ❤️ by Saanu.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Saanu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="../index.html#allTools">All Tools</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 All Tools Hub by Saanu. All rights reserved.</p>
+                <p>&copy; 2025 All Tools Hub by Saanu. All rights reserved.</p>
+                <p style="font-size: 0.9em; margin-top: 5px;">Contact: saanu03verman@gmail.com</p>
             </div>
         </div>
     </footer>
@@ -129,6 +196,8 @@
             } else {
                 document.getElementById('toolHeader').innerHTML = '<h1>Tool Not Found</h1><p>Please select a tool from the menu.</p>';
                 document.getElementById('toolContainer').innerHTML = '<p>Go back to <a href="../index.html">home page</a></p>';
+                // Hide generic sections if tool not found
+                document.querySelector('.how-to-use').style.display = 'none';
             }
         });
     </script>
